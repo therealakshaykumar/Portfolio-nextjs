@@ -7,7 +7,8 @@ const recentIPs = new Set<string>();
 
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get("x-forwarded-for")?.split(",")[0] || "Unknown";  
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("cf-connecting-ip") || "Unknown";
+    
     if (recentIPs.has(ip)) {
       return NextResponse.json({ message: "Already logged" });
     }

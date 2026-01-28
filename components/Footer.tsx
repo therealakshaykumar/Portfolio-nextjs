@@ -7,8 +7,12 @@ export default function Footer() {
     const logVisit = async () => {
       try {
         await fetch('/api/ping', { 
-          method: 'POST',  
-          keepalive: true  
+          method: 'POST',
+          keepalive: true,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({})
         });
       } catch (error) {
         console.error('Error logging visit:', error);
