@@ -21,7 +21,7 @@
     "@react-email/tailwind": "^1.0.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.6.3",
-    "next": "15.2.4",
+    "next": "15.2.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hot-toast": "^2.5.2",
