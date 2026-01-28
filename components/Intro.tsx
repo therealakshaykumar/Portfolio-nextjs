@@ -16,10 +16,14 @@ const Intro = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const controls = animate(count, 2, {
+    const startDate = new Date(2023, 5, 1); // June 2023 (month is 0-indexed)
+    const currentDate = new Date();
+    const yearsOfExperience = (currentDate.getTime() - startDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+    
+    const controls = animate(count, yearsOfExperience, {
       duration: 2,
       delay: 0.5,
-      onUpdate: (latest) => setCurrent(Math.round(latest)),
+      onUpdate: (latest) => setCurrent(parseFloat(latest.toFixed(1))),
     });
 
     return () => controls.stop();
@@ -38,13 +42,13 @@ const Intro = () => {
           transition={{ type: "tween", duration: 0.2 }}
         >
           <Image
-            src="/pic.jpg"
+            src="/profile.jpg"
             alt="Akshay portrait"
-            width="192"
-            height="192"
+            width="250"
+            height="250"
             quality="95"
             priority={true}
-            className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+            className="h-40 w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
           />
         </motion.div>
       </div>
@@ -59,7 +63,7 @@ const Intro = () => {
         <span className="font-bold text-shadow-2xs">full-stack developer</span>{" "}
         with <span className="font-bold">{current} years</span> of experience. I
         enjoy building <span className="italic">web apps</span>. My focus is{" "}
-        <span className="underline">Next.js</span> and{" "}
+        <span className="underline">Next.js, React</span> and{" "}
         <span className="underline">Node.js</span>
       </motion.h1>
 

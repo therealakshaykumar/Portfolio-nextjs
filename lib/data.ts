@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import recibo from "@/public/Recibo.png";
+import mwsrc from "@/public/MWSRC.png";
+import levelx from "@/public/levelx.png";
 
 export const links = [
   {
@@ -69,21 +69,21 @@ export const projectsData = [
     description:
       "Recibo is a powerful Sales Force Automation tool designed for primary and secondary sales, enabling real-time B2B eCommerce for orders and new product launches.",
     tags: ['ExpressJS', 'MySQL', 'GraphQL', 'WorkerThreads'],
-    imageUrl: corpcommentImg,
+    imageUrl: recibo,
   },
   {
     title: "DCON-AG",
     description:
       "DCON AG is an advanced application designed for agricultural use, allowing users to remotely control irrigation systems via the internet.",
     tags: ['Loopback 4', 'MQTT', 'PostgreSQL', 'Firebase' ,'JWT'],
-    imageUrl: rmtdevImg,
+    imageUrl: mwsrc,
   },
   {
     title: "WMC - Wireless Motor Controller",
     description:
       "Innovative IoT controller for irrigation and fertigation, designed to provide efficient and hassle-free farm control from anywhere.",
     tags: ['Loopback 4', 'MQTT', 'MySQL', 'Firebase', 'RabbitMQ'],
-    imageUrl: wordanalyticsImg,
+    imageUrl: levelx,
   },
 ] as const;
 

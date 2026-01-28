@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "prisma generate"
+    "lint": "next lint"
   },
   "engines": {
     "npm": ">=8.6.0",
@@ -17,7 +16,6 @@
     "@react-email/render": "0.0.9"
   },
   "dependencies": {
-    "@prisma/client": "^6.7.0",
     "@react-email/components": "^0.0.36",
     "@react-email/render": "0.0.9",
     "@react-email/tailwind": "^1.0.4",
@@ -43,7 +41,6 @@
     "@types/react-vertical-timeline-component": "^3.3.6",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "prisma": "^6.7.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
