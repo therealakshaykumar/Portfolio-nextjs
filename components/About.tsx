@@ -22,7 +22,7 @@ const About = () => {
                 There&apos;s something incredibly rewarding about creating secure authentication systems, optimizing database queries, and finding elegant solutions to complex business challenges. When I face tough data processing demands, I&apos;m eager to dive into stored procedures and database optimization, believing that sometimes the best solutions are right next to the data.
             </p>
             <p className='mb-3'>
-                My commitment to lifelong learning keeps me at the cutting edge of technology, while my practical experience helps me select the right tools for each unique challenge. Every project is a new opportunity to push boundaries, enhance performance, and create something that truly makes a difference in users' lives.
+                My commitment to lifelong learning keeps me at the cutting edge of technology, while my practical experience helps me select the right tools for each unique challenge. Every project is a new opportunity to push boundaries, enhance performance, and create something that truly makes a difference in users&apos; lives.
             </p>
         </motion.section>
     );
