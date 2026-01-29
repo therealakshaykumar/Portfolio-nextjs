@@ -4,7 +4,8 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import recibo from "@/public/Recibo.png";
 import mwsrc from "@/public/MWSRC.png";
-import levelx from "@/public/levelx.png";
+import blog from "@/public/blog.png";
+import movie from "@/public/movie.png";
 
 export const links = [
   {
@@ -70,6 +71,7 @@ export const projectsData = [
       "Recibo is a powerful Sales Force Automation tool designed for primary and secondary sales, enabling real-time B2B eCommerce for orders and new product launches.",
     tags: ['ExpressJS', 'MySQL', 'GraphQL', 'WorkerThreads'],
     imageUrl: recibo,
+    link:'https://recibo.ai/'
   },
   {
     title: "DCON-AG",
@@ -77,13 +79,31 @@ export const projectsData = [
       "DCON AG is an advanced application designed for agricultural use, allowing users to remotely control irrigation systems via the internet.",
     tags: ['Loopback 4', 'MQTT', 'PostgreSQL', 'Firebase' ,'JWT'],
     imageUrl: mwsrc,
+    link:'https://web.dconag.com'
   },
   {
     title: "WMC - Wireless Motor Controller",
     description:
       "Innovative IoT controller for irrigation and fertigation, designed to provide efficient and hassle-free farm control from anywhere.",
     tags: ['Loopback 4', 'MQTT', 'MySQL', 'Firebase', 'RabbitMQ'],
-    imageUrl: levelx,
+    imageUrl: mwsrc,
+    link:'https://play.google.com/store/apps/details?id=com.mobitech.mconproject&hl=en_IN&pli=1'
+  },
+  {
+    title: "Film-Flex | Movie DB",
+    description:
+      "A modern movie database web app, built with Angular and TailwindCSS, it leverages the TMDB API .",
+    tags: ['Angular', 'TailwindCSS', 'TMDB API', 'Firebase'],
+    imageUrl: movie,
+    link:'https://film-flex.web.app/'
+  },
+  {
+    title: "Times Blog",
+    description:
+      "A modern blogging platform built with Angular and TailwindCSS, featuring real-time content updates using Firebase Realtime Database.",
+    tags: ['Angular', 'TailwindCSS', 'Realtime Database', 'Firebase'],
+    imageUrl: blog,
+    link:'https://times-blog.web.app/'
   },
 ] as const;
 
@@ -92,21 +112,21 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
-  "React",
-  "Angular",
-  "Next.js",
-  "Nest.js",
   "Node.js",
+  "Express.js",
+  "PostgreSQL",
+  "MySQL",
+  "MongoDB",
+  "React",
+  "Next.js",
+  "Angular",
+  "Nest.js",
   "Git",
   "Tailwind",
   "Prisma",
   "Squelize",
   "TypeORM",
-  "MongoDB",
   "Zustand",
   "GraphQL",
-  "Express",
-  "PostgreSQL",
-  "MySQL",
   "Framer Motion",
 ] as const;

@@ -16,13 +16,13 @@ const About = () => {
             id="about">
             <SectionHeading>About Me</SectionHeading>
             <p className='mb-3'>
-                As a passionate Software Developer, I find myself constantly exploring the ever-evolving landscape of web development. My journey in tech is driven by a dual love: creating seamless, interactive user experiences on the frontend while architecting robust, secure systems on the backend. I&apos;m like a digital craftsman who enjoys both designing the façade of a building and engineering its foundation.
+                As a passionate Software Developer, I’m always on the lookout for new adventures in the fast-paced world of web development. My journey in tech is fueled by a love for two key areas: crafting smooth, interactive user experiences on the frontend and building solid, secure systems on the backend. I like to think of myself as a digital craftsman, enjoying both the artistry of designing a building’s exterior and the engineering of its strong foundation.
             </p>
             <p className='mb-3'>
-                There&apos;s something deeply satisfying about designing secure authentication systems, optimizing database queries, and creating elegant solutions to complex business problems. When faced with challenging data processing requirements, I&apos;m not afraid to dive into stored procedures and database optimization, believing that sometimes the best solution lies closer to the data.
+                There’s something incredibly rewarding about creating secure authentication systems, optimizing database queries, and finding elegant solutions to complex business challenges. When I face tough data processing demands, I’m eager to dive into stored procedures and database optimization, believing that sometimes the best solutions are right next to the data.
             </p>
             <p className='mb-3'>
-                My commitment to continuous learning keeps me at the forefront of technology, while my practical experience helps me choose the right tools for each unique challenge. Every project is an opportunity to push boundaries, improve performance, and create something that makes a difference in users&apos; lives.
+                My commitment to lifelong learning keeps me at the cutting edge of technology, while my practical experience helps me select the right tools for each unique challenge. Every project is a new opportunity to push boundaries, enhance performance, and create something that truly makes a difference in users' lives.
             </p>
         </motion.section>
     );
