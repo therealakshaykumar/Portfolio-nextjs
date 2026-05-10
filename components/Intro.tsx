@@ -9,10 +9,12 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
+import { useLenis } from "lenis/react";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home");
   const count = useMotionValue(0);
+  const lenis = useLenis();
   //   const rounded = useTransform(count, (latest) => Math.round(latest));
   const [current, setCurrent] = useState(0);
 
@@ -78,6 +80,10 @@ const Intro = () => {
       >
         <Link
           href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            lenis?.scrollTo("#contact");
+          }}
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here{" "}

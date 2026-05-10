@@ -5,9 +5,12 @@ import { links } from '@/lib/data'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { ActiveSectionStore } from '@/store/active-section-store'
+import { useLenis } from 'lenis/react'
 
 const Header = () => {
   const {activeSection,setActiveSection,setTimeOfLastClick} = ActiveSectionStore()
+  const lenis = useLenis();
+
   return (
     <header className='!z-[999] relative'>
         <motion.div className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white/40 bg-white/80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950/75 dark:border-black/40'
@@ -25,7 +28,9 @@ const Header = () => {
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-              onClick={()=> {
+              onClick={(e)=> {
+                e.preventDefault();
+                lenis?.scrollTo(link.hash);
                 setActiveSection(link.name)
                 setTimeOfLastClick(Date.now())
               }}
@@ -41,7 +46,7 @@ const Header = () => {
               >
                 {link.name}
 
-                
+
               </Link>
               {
                 link.name === activeSection && (
@@ -51,7 +56,6 @@ const Header = () => {
                   type: "spring",
                   damping: 30,
                   stiffness: 380,
-                  delay: 0.5
                 }}
                  className='absolute inset-0 bg-gray-200 rounded-full -z-10 dark:bg-gray-800'></motion.span>)
               }
