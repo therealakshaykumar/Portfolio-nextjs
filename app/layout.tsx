@@ -5,6 +5,13 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/Theme";
 import SmoothScroll from "@/components/SmoothScroll";
+import {Outfit} from 'next/font/google';
+
+const outfit = Outfit({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "<Akshay /> | Web Dev",
@@ -19,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`antialiased ${outfit.className} relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <SmoothScroll>
           <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
