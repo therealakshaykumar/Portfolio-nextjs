@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { sendMail } from '@/actions/sendEmail';
 import SubmitBtn from './Submit-Btn';
 import toast from 'react-hot-toast';
+import { EMAIL } from '@/lib/constants';
 
 const Contact = () => {
     const {ref} = useSectionInView('Contact')
@@ -28,8 +29,8 @@ const Contact = () => {
         <SectionHeading>Contact Me</SectionHeading>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:akshaynew45@gmail.com">
-        akshaynew45@gmail.com
+        <a className="underline" href={`mailto:${EMAIL}`}>
+        {EMAIL}
         </a>{" "}
         or through this form.
       </p>
