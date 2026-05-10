@@ -38,9 +38,13 @@ const Contact = () => {
         const {error} = await sendMail(formdata)
         if(error){
           toast.error(error)
+          return;
         }
         toast.success('Email sent successfully')
       }} className="mt-10 flex flex-col dark:text-black">
+        {/* Honeypot field */}
+        <input type="checkbox" name="_honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+        
         <input 
         className="h-14 px-4 rounded-lg borderBlack dark:bg-white/80 dark:focus:bg-white/90 transition-all dark:outline-none"
         name="senderEmail"

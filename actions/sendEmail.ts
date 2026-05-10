@@ -8,6 +8,13 @@ import { Resend } from "resend";
 const RESEND = new Resend(String(process.env.RESEND_API_KEY))
 
 export const sendMail = async(formdata:FormData)=>{
+  const honeypot = formdata.get("_honeypot");
+  if (honeypot) {
+    return {
+      error: "Bot detected",
+    };
+  }
+
     const senderEmail = formdata.get("senderEmail");
   const message = formdata.get("message");
 
