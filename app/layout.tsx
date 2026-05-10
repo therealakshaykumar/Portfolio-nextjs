@@ -14,8 +14,25 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: "<Akshay /> | Web Dev",
-  description: "Akshay's portfolio featuring my skills and experience",
+  title: "Akshay Kumar | Full-Stack Developer Portfolio",
+  description: "Akshay Kumar is a full-stack developer with 2+ years of experience specializing in Node.js, Express, React, and Next.js.",
+  keywords: ["Akshay Kumar", "Full-Stack Developer", "Node.js Developer", "React Developer", "Next.js Portfolio", "Software Engineer"],
+  authors: [{ name: "Akshay Kumar" }],
+  creator: "Akshay Kumar",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://therealakshay.vercel.app/",
+    title: "Akshay Kumar | Full-Stack Developer",
+    description: "Full-stack developer specializing in building high-performance web applications with Node.js and React.",
+    siteName: "Akshay Kumar Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Akshay Kumar | Full-Stack Developer",
+    description: "Full-stack developer specializing in building high-performance web applications with Node.js and React.",
+  },
+  metadataBase: new URL("https://therealakshay.vercel.app/"),
 };
 
 export default function RootLayout({
