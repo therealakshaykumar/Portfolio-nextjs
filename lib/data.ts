@@ -69,7 +69,7 @@ export const projectsData = [
     title: "Recibo SFA",
     description:
       "Recibo is a powerful Sales Force Automation tool designed for primary and secondary sales, enabling real-time B2B eCommerce for orders and new product launches.",
-    tags: ['ExpressJS', 'MySQL', 'GraphQL', 'WorkerThreads'],
+    tags: ['ExpressJS', 'MySQL', 'GraphQL', 'WorkerThreads', 'Claude Code'],
     imageUrl: recibo,
     link:'https://recibo.ai/'
   },
@@ -93,7 +93,7 @@ export const projectsData = [
     title: "MUVIO | Movie DB",
     description:
       "Muvio is a sleek and modern AI-powered movie search and database application .",
-    tags: ['React', 'Zustand', 'TailwindCSS', 'TMDB API', 'Firebase Authentication'],
+    tags: ['React', 'Zustand', 'Gemini AI', 'TailwindCSS', 'TMDB API', 'Firebase Authentication'],
     imageUrl: movie,
     link:'https://muvio.netlify.app/'
   },
