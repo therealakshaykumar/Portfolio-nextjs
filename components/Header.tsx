@@ -19,7 +19,7 @@ const Header = () => {
         >
         </motion.div>
         <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-600 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-700 sm:w-[initial] sm:flex-nowrap sm:gap-5 dark:text-gray-300">
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
@@ -40,9 +40,9 @@ const Header = () => {
                 }}
                   className=
                   {clsx(
-                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-gray-300 relative",
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-900 transition-all dark:text-gray-300 dark:hover:text-gray-100 relative hover:brightness-110",
                     {
-                      "text-gray-950 dark:text-white":
+                      "text-gray-900 dark:text-white font-semibold":
                         activeSection === link.name,
                     }
                   )}
