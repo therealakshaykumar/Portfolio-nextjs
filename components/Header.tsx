@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className='!z-[999] relative'>
-        <motion.div className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white/40 bg-white/80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950/75 dark:border-black/40'
+        <motion.div className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white/30 bg-gradient-to-b from-white/40 to-white/20 shadow-lg shadow-black/[0.08] backdrop-blur-xl sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gradient-to-b dark:from-gray-900/40 dark:to-gray-950/30 dark:border-white/10 dark:shadow-black/40'
         initial={{x: "-50%" , y: -100, opacity:0}}
         animate={{x: "-50%", y:0 , opacity:1}}
         >
@@ -27,37 +27,40 @@ const Header = () => {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Link
-              onClick={(e)=> {
-                e.preventDefault();
-                lenis?.scrollTo(link.hash);
-                setActiveSection(link.name)
-                setTimeOfLastClick(Date.now())
-              }}
-                className=
-                {clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                {link.name}
-
-
-              </Link>
+                <Link
+                onClick={(e)=> {
+                  e.preventDefault();
+                  lenis?.scrollTo(link.hash);
+                  setActiveSection(link.name)
+                  setTimeOfLastClick(Date.now())
+                }}
+                  className=
+                  {clsx(
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-gray-300 relative",
+                    {
+                      "text-gray-950 dark:text-gray-200":
+                        activeSection === link.name,
+                    }
+                  )}
+                  href={link.hash}
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
               {
                 link.name === activeSection && (
                 <motion.span
                 layoutId={activeSection}
                 transition={{
                   type: "spring",
-                  damping: 30,
-                  stiffness: 380,
+                  damping: 25,
+                  stiffness: 400,
                 }}
-                 className='absolute inset-0 bg-gray-200 rounded-full -z-10 dark:bg-gray-800'></motion.span>)
+                 className='absolute inset-0 bg-gradient-to-br from-white/40 to-white/20 rounded-full -z-10 dark:from-gray-700/40 dark:to-gray-800/30 backdrop-blur-md shadow-lg shadow-gray-900/10 dark:shadow-black/30'></motion.span>)
               }
             </motion.li>
           ))}

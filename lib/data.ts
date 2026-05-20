@@ -90,12 +90,12 @@ export const projectsData = [
     link:'https://play.google.com/store/apps/details?id=com.mobitech.mconproject&hl=en_IN&pli=1'
   },
   {
-    title: "Film-Flex | Movie DB",
+    title: "MUVIO | Movie DB",
     description:
-      "A modern movie database web app, built with Angular and TailwindCSS, it leverages the TMDB API .",
-    tags: ['Angular', 'TailwindCSS', 'TMDB API', 'Firebase'],
+      "Muvio is a sleek and modern AI-powered movie search and database application .",
+    tags: ['React', 'Zustand', 'TailwindCSS', 'TMDB API', 'Firebase Authentication'],
     imageUrl: movie,
-    link:'https://film-flex.web.app/'
+    link:'https://muvio.netlify.app/'
   },
   {
     title: "Times Blog",
