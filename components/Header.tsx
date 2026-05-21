@@ -6,10 +6,35 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { ActiveSectionStore } from '@/store/active-section-store'
 import { useLenis } from 'lenis/react'
+import { useRouter, usePathname } from 'next/navigation'
 
 const Header = () => {
   const {activeSection,setActiveSection,setTimeOfLastClick} = ActiveSectionStore()
   const lenis = useLenis();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Hide header on projects page
+  if (pathname === '/projects') {
+    return null;
+  }
+
+  const handleLinkClick = (link: (typeof links)[number]) => {
+    return (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      
+      // Check if it's a hash link (section) or a page link
+      if (link.hash.startsWith('#')) {
+        lenis?.scrollTo(link.hash);
+      } else {
+        // It's a regular page link
+        router.push(link.hash);
+      }
+      
+      setActiveSection(link.name);
+      setTimeOfLastClick(Date.now());
+    };
+  };
 
   return (
     <header className='!z-[999] relative'>
@@ -32,12 +57,7 @@ const Header = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Link
-                onClick={(e)=> {
-                  e.preventDefault();
-                  lenis?.scrollTo(link.hash);
-                  setActiveSection(link.name)
-                  setTimeOfLastClick(Date.now())
-                }}
+                  onClick={handleLinkClick(link)}
                   className=
                   {clsx(
                     "flex w-full items-center justify-center px-3 py-3 hover:text-gray-900 transition-all dark:text-gray-300 dark:hover:text-gray-100 relative hover:brightness-110",
