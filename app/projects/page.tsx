@@ -13,11 +13,6 @@ export default function ProjectsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Scroll to top when page loads
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     setIsLoading(true);
     
     // Simulate dynamic loading with staggered effect

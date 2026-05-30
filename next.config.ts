@@ -35,6 +35,14 @@ const nextConfig: NextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
+          {
+            key: "Accept-CH",
+            value: "Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Model, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version-List",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "ch-ua=*, ch-ua-mobile=*, ch-ua-platform=*, ch-ua-platform-version=*, ch-ua-model=*, ch-ua-arch=*",
+          },
         ],
       },
     ];

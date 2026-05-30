@@ -22,6 +22,7 @@ const Projects = () => {
       <div className='flex justify-center mt-12'>
         <Link 
           href="/projects" 
+          scroll={true}
           className='px-8 py-3 bg-black text-white rounded-lg hover:bg-black/80 dark:bg-white/20 dark:hover:bg-white/30 transition-colors'
         >
           View All Projects
