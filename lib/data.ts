@@ -123,10 +123,12 @@ export const skillsData = [
   "Nest.js",
   "Git",
   "Tailwind",
-  "Prisma",
+  "Drizzle",
   "Squelize",
   "TypeORM",
   "Zustand",
   "GraphQL",
   "Framer Motion",
+  "Claude Code",
+  "Gemini CLI",
 ] as const;
