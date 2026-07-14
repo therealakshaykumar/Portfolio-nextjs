@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import SectionHeading from './Heading'
 import { useSectionInView } from '@/lib/hooks'
 import { motion } from "framer-motion";
@@ -7,9 +7,13 @@ import { sendMail } from '@/actions/sendEmail';
 import SubmitBtn from './Submit-Btn';
 import toast from 'react-hot-toast';
 import { EMAIL } from '@/lib/constants';
+import DownloadSuccess from './DownloadSuccess';
 
 const Contact = () => {
     const {ref} = useSectionInView('Contact')
+    const [showSuccess, setShowSuccess] = useState(false)
+    const formRef = useRef<HTMLFormElement>(null)
+
   return (
     <motion.section id="contact"
     initial={{
@@ -34,13 +38,20 @@ const Contact = () => {
         </a>{" "}
         or through this form.
       </p>
-      <form action={async (formdata)=>{
+      <form ref={formRef} action={async (formdata)=>{
         const {error} = await sendMail(formdata)
         if(error){
           toast.error(error)
           return;
         }
-        toast.success('Email sent successfully')
+        // Reset the form
+        formRef.current?.reset()
+
+        // Show the success animation
+        setShowSuccess(true)
+        setTimeout(() => {
+          setShowSuccess(false)
+        }, 3000)
       }} className="mt-10 flex flex-col dark:text-black">
         {/* Honeypot field */}
         <input type="checkbox" name="_honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
@@ -62,6 +73,11 @@ const Contact = () => {
         maxLength={5000}></textarea>
         <SubmitBtn />
       </form>
+
+      <DownloadSuccess
+        show={showSuccess}
+        onComplete={() => setShowSuccess(false)}
+      />
     </motion.section>
   )
 }

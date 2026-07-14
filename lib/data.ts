@@ -1,7 +1,26 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAngular, FaGitAlt, FaCss3Alt, FaHtml5 } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiNextdotjs,
+  SiNestjs,
+  SiTailwindcss,
+  SiDrizzle,
+  SiSequelize,
+  SiGraphql,
+  SiFramer,
+  SiAnthropic,
+  SiGoogle,
+} from "react-icons/si";
+import { TbDatabase } from "react-icons/tb";
+import { GiBearFace } from "react-icons/gi";
 import recibo from "@/public/Recibo.png";
 import mwsrc from "@/public/MWSRC.png";
 import blog from "@/public/blog.png";
@@ -108,27 +127,27 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "Node.js",
-  "Express.js",
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "React",
-  "Next.js",
-  "Angular",
-  "Nest.js",
-  "Git",
-  "Tailwind",
-  "Drizzle",
-  "Squelize",
-  "TypeORM",
-  "Zustand",
-  "GraphQL",
-  "Framer Motion",
-  "Claude Code",
-  "Gemini CLI",
+  { name: "HTML", icon: React.createElement(FaHtml5) },
+  { name: "CSS", icon: React.createElement(FaCss3Alt) },
+  { name: "JavaScript", icon: React.createElement(SiJavascript) },
+  { name: "TypeScript", icon: React.createElement(SiTypescript) },
+  { name: "Node.js", icon: React.createElement(FaNodeJs) },
+  { name: "Express.js", icon: React.createElement(SiExpress) },
+  { name: "PostgreSQL", icon: React.createElement(SiPostgresql) },
+  { name: "MySQL", icon: React.createElement(SiMysql) },
+  { name: "MongoDB", icon: React.createElement(SiMongodb) },
+  { name: "React", icon: React.createElement(FaReact) },
+  { name: "Next.js", icon: React.createElement(SiNextdotjs) },
+  { name: "Angular", icon: React.createElement(FaAngular) },
+  { name: "Nest.js", icon: React.createElement(SiNestjs) },
+  { name: "Git", icon: React.createElement(FaGitAlt) },
+  { name: "Tailwind", icon: React.createElement(SiTailwindcss) },
+  { name: "Drizzle", icon: React.createElement(SiDrizzle) },
+  { name: "Sequelize", icon: React.createElement(SiSequelize) },
+  { name: "TypeORM", icon: React.createElement(TbDatabase) },
+  { name: "Zustand", icon: React.createElement(GiBearFace) },
+  { name: "GraphQL", icon: React.createElement(SiGraphql) },
+  { name: "Framer Motion", icon: React.createElement(SiFramer) },
+  { name: "Claude Code", icon: React.createElement(SiAnthropic) },
+  { name: "Gemini CLI", icon: React.createElement(SiGoogle) },
 ] as const;
