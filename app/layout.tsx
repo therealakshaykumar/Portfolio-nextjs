@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/Theme";
 import SmoothScroll from "@/components/SmoothScroll";
 import GlassCursor from "@/components/GlassCursor";
+import ConsoleEasterEgg from "@/components/ConsoleEasterEgg";
 import {Outfit} from 'next/font/google';
 
 const outfit = Outfit({
@@ -55,6 +56,7 @@ export default function RootLayout({
           <Toaster position="bottom-right" />
           <ThemeSwitch />
           <GlassCursor />
+          <ConsoleEasterEgg />
         </SmoothScroll>
       </body>
     </html>
