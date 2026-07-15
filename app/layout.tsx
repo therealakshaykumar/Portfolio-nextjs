@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/Theme";
 import SmoothScroll from "@/components/SmoothScroll";
+import GlassCursor from "@/components/GlassCursor";
 import {Outfit} from 'next/font/google';
 
 const outfit = Outfit({
@@ -53,6 +54,7 @@ export default function RootLayout({
           <Footer />
           <Toaster position="bottom-right" />
           <ThemeSwitch />
+          <GlassCursor />
         </SmoothScroll>
       </body>
     </html>
