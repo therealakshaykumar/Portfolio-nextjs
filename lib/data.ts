@@ -25,6 +25,7 @@ import recibo from "@/public/Recibo.png";
 import mwsrc from "@/public/MWSRC.png";
 import blog from "@/public/blog.png";
 import movie from "@/public/movie.png";
+import snippetPool from "@/public/snippet_pool.png";
 
 export const links = [
   {
@@ -75,7 +76,7 @@ export const experiencesData = [
   {
     title: "Software Developer",
     company: "LEVELX",
-    link:"https://levelx.in/",
+    link: "https://levelx.in/",
     description:
       "I worked as a Software Developer Intern, my stack includes Angular, TypeScript, Tailwind, Express and MongoDB.",
     icon: React.createElement(FaReact),
@@ -90,15 +91,15 @@ export const projectsData = [
       "Recibo is a powerful Sales Force Automation tool designed for primary and secondary sales, enabling real-time B2B eCommerce for orders and new product launches.",
     tags: ['ExpressJS', 'MySQL', 'GraphQL', 'WorkerThreads', 'Claude Code'],
     imageUrl: recibo,
-    link:'https://recibo.ai/'
+    link: 'https://recibo.ai/'
   },
   {
     title: "DCON-AG",
     description:
       "DCON AG is an advanced application designed for agricultural use, allowing users to remotely control irrigation systems via the internet.",
-    tags: ['Loopback 4', 'MQTT', 'PostgreSQL', 'Firebase' ,'JWT'],
+    tags: ['Loopback 4', 'MQTT', 'PostgreSQL', 'Firebase', 'JWT'],
     imageUrl: mwsrc,
-    link:'https://web.dconag.com'
+    link: 'https://web.dconag.com'
   },
   {
     title: "WMC - Wireless Motor Controller",
@@ -106,7 +107,7 @@ export const projectsData = [
       "Innovative IoT controller for irrigation and fertigation, designed to provide efficient and hassle-free farm control from anywhere.",
     tags: ['Loopback 4', 'MQTT', 'MySQL', 'Firebase', 'RabbitMQ'],
     imageUrl: mwsrc,
-    link:'https://play.google.com/store/apps/details?id=com.mobitech.mconproject&hl=en_IN&pli=1'
+    link: 'https://play.google.com/store/apps/details?id=com.mobitech.mconproject&hl=en_IN&pli=1'
   },
   {
     title: "MUVIO | Movie DB",
@@ -114,7 +115,15 @@ export const projectsData = [
       "Muvio is a sleek and modern AI-powered movie search and database application .",
     tags: ['React', 'Zustand', 'Gemini AI', 'TailwindCSS', 'TMDB API', 'Firebase Authentication'],
     imageUrl: movie,
-    link:'https://muvio.netlify.app/'
+    link: 'https://muvio.netlify.app/'
+  },
+  {
+    title: "Snippet Pool",
+    description:
+      "A personal code snippet manager to store, run, review and recall code snippets before interviews or regular practice sessions.",
+    tags: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Monaco Editor'],
+    imageUrl: snippetPool,
+    link: 'https://snippet-pool.vercel.app/'
   },
   {
     title: "Times Blog",
@@ -122,8 +131,9 @@ export const projectsData = [
       "A modern blogging platform built with Angular and TailwindCSS, featuring real-time content updates using Firebase Realtime Database.",
     tags: ['Angular', 'TailwindCSS', 'Realtime Database', 'Firebase'],
     imageUrl: blog,
-    link:'https://times-blog.web.app/'
+    link: 'https://times-blog.web.app/'
   },
+
 ] as const;
 
 export const skillsData = [
